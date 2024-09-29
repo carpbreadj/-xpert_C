@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main() {
+    int year;
+
+    printf("연도를 입력해 주세요 : ");
+    scanf("%d", &year); //연도를 입력받는다
+
+    printf("입력된 연도가 윤년이면 출력은 1입니다 : ");
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) //윤년인 경우
+        printf("1\n"); //1출력
+    else //아닌경우
+        printf("0\n"); //2출력
+
+    return 0;
+}
