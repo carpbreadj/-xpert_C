@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+int main() {
+    int payment, price, money;
+    int w10000, w5000, w1000, w500, w100;
+
+    printf("사용자가 낸 돈 >> ");
+    scanf("%d", &payment); //지불액 입력
+    printf("물건 값 >> ");
+    scanf("%d", &price); //물건값 입력
+
+    money = payment - price;
+
+    if (money < 0) //지불한 금액보다 물건값이 클 경우 “돈이 부족합니다” 출력
+        printf("돈이 부족합니다.");
+    else {
+        w10000 = money / 10000; //각 금액권 계산식
+        money %= 10000;
+        w5000 = money / 5000;
+        money %= 5000;
+        w1000 = money / 1000;
+        money %= 1000;
+        w500 = money / 500;
+        money %= 500;
+        w100 = money / 100;
+        money %= 100;
+
+        printf("만  원권 : %d장\n", w10000); //출력
+        printf("오천원권 : %d장\n", w5000);
+        printf("천  원권 : %d장\n", w1000);
+        printf("오백  원 : %d장\n", w500);
+        printf("백    원 : %d장\n", w100);
+    }
+
+    return 0;
+}
