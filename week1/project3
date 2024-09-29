@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int main(void) {
+	int weight; //몸무게 자료형 int
+	float height, bmi;//키 자료형 float, 출력 시 bmi 자료형 float
+
+	printf("몸무게를 입력하세요 : ");
+	scanf("%d", &weight);
+	printf("키를 입력하세요 : ");
+	scanf("%f", &height);
+
+	bmi = (float)weight / ((height/100) * (height/100)); //float으로 계산이 되므로 weight를 float형으로 변환해준다.
+
+	if (bmi <= 15)
+		printf("BMI지수는 %f이므로 저체중입니다.",bmi);
+	else if(15 < bmi <= 20)
+		printf("BMI지수는 %f이므로 표준입니다.", bmi);
+
+	return 0;
+}
