@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+int main(void) {
+	int num;
+	int fac = 1;
+
+	printf("정수를 입력하세요 : "); //정수를 입력받는다.
+	scanf("%d", &num);
+	for (int i = 1; i < num + 1; i++) //반복문을 통해 1부터 num까지의 곱을 계산한다.
+		fac *= i;
+
+	printf("%d!는 %d입니다.", num, fac); //출력
+}
