@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main(void) {
+    int money = 10000; //현재 가지고 있는 금액 10000원
+    int pay = 0;
+
+    printf("현재 남아있는 잔액 : %d\n\n", money); //현재 남아있는 잔액인 10000을 출력
+
+    do {
+        printf("충전 (+) / 사용 (-) = ");
+        scanf("%d", &pay); //충전, 혹은 사용한 금액을 입력받는다.
+        money += pay; 
+        printf("남아있는 잔액 : %d\n\n", money); //잔액을 출력한다.
+    } while (money > 2000); //잔액이 2000보다 작을때까지 do-while문을 반복한다.
+
+    printf("다음 승차 시 카드 충전이 필요합니다!\n\n"); //잔액이 2000보다 적을 경우 출력한다.
+
+    return 0;
+}
